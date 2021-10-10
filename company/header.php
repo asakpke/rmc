@@ -1,6 +1,6 @@
 <?php
-require 'function.php';
-require 'db.php';
+// require 'function.php';
+// require 'db.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +15,6 @@ require 'db.php';
 	<h1>
 		<!-- LARGE_LOGO -->
 		<?//=$current_company['name']?>
-		<a href="index.php"><?=$current_company['name']?></a>
+		<a href="index.php">COMPANY</a>
 	</h1>
 </header>

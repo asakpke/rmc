@@ -3,10 +3,10 @@
 	<h3>
 		<!-- SMALL_LOGO -->
 		<?//=$current_company['name']?>
-		<a href="index.php"><?=$current_company['name']?></a>
+		<a href="index.php">COMPANY</a>
 	</h3>
 </footer>
 </body>
 </html>
 <?php
-$conn->close();
+//$conn->close();
