@@ -27,7 +27,7 @@ if (defined('FOOTER_PHP_ROOT')) {
 	<!-- </h3> -->
 	<hr>
 	<nav class="bottom">
-		Powered by <a href="<?=$site_domain?>" target="_blank">RMC</a> &copy;, a project of <a href="http://eSite.pk" target="_blank">RoshanTech</a>
+		Powered by <a href="<?=$ssl.$site_domain?>" target="_blank">RMC</a> &copy;, a project of <a href="http://eSite.pk" target="_blank">RoshanTech</a>
 	</nav>
 </footer>
 </body>

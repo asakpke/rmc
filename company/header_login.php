@@ -20,7 +20,7 @@ require '../function.php';
 if (empty($_SESSION['Company_Login']['id'])) {
 	// $_SESSION['page_msg'] = 'Unauthorized access please signin';
 	// header("Location: {$site_url}/company/signin.php");
-	header("Location: {$site_domain}");
+	header("Location: {$ssl.$site_domain}");
 	exit(0);
 }
 ?><!DOCTYPE html>

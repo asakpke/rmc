@@ -78,7 +78,7 @@ function get_current_company() {
 }
 
 function set_company() {
-	global $conn, $site_domain, $root_folder;
+	global $conn, $root_folder;
 	// pr($conn, '$conn set_company()');
 
 	// pr($_POST,'$_POST');

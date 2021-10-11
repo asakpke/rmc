@@ -14,7 +14,7 @@ company_login();
 	<label for="password">Password: <span class="required">*</span></label><br>
   <input type="password" id="password" name="password" value="<?=!empty($_POST['password']) ? $_POST['password'] : ''?>" required><br><br>
 
-  <small>You should be using your subdomain for signin instead of the main website i.e <a href="http://YourSubDomain.<?=$site_domain?>">http://YourSubDomain.<?=$site_domain?></a>.</small><br><br>
+  <small>You should be using your subdomain for signin instead of the main website i.e <a href="<?=$ssl?>YourSubDomain.<?=$site_domain?>"><?=$ssl?>YourSubDomain.<?=$site_domain?></a>.</small><br><br>
 
 	<input type="submit">
 
