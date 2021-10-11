@@ -1,35 +1,10 @@
 <?php require 'header.php' ?>
 
 <?php
-// echo '<pre>'; print_r($_POST); echo '</pre>';
-// pr($_POST,'$_POST');
-// $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-// pr($hash,'$hash');
 
-// $verify = password_verify($_POST['password'], $hash);
-// pr($verify,'$verify');
-
-// pr($_FILES,'$_FILES');
 ?>
 
-<h2>New Signup</h2>
-<form method="post" enctype="multipart/form-data">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" value="<?=!empty($_POST['name']) ? $_POST['name'] : ''?>"><br><br>
-
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" value="<?=!empty($_POST['email']) ? $_POST['email'] : ''?>" required><br><br>
-
-	<label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" value="<?=!empty($_POST['password']) ? $_POST['password'] : ''?>" required><br><br>
-
-	<label for="ref">Reference Code:</label><br>
-  <input type="text" id="ref" name="ref" value="<?=!empty($_POST['ref']) ? $_POST['ref'] : ''?>" required><br><br>
-
-	<label for="payment">Payment Proof:</label><br>
-  <input type="file" id="payment" name="payment" value="<?=!empty($_POST['payment']) ? $_POST['payment'] : ''?>" required><br><br>
-
-	<input type="submit">
-</form>
+<h2>Welcome to <?=$_SESSION['Current_Company']['name'] //$current_company['name']?></h2>
+<p>New to <?=$_SESSION['Current_Company']['name'] //$current_company['name']?>? You may signup or signin.</p>
 
 <?php require 'footer.php' ?>

@@ -1,0 +1,18 @@
+/* label span, input[type=submit] + p { */
+.required {
+	color: red;
+}
+
+body {
+	/* margin: 0 auto; */
+	margin: 15px auto;
+	width: fit-content;
+	/* border: 1px solid gray; */
+	border: 1px solid lightgray;
+	border-radius: 15px;
+	padding: 50px 100px;
+}
+
+nav.bottom {
+	float: right;
+}
