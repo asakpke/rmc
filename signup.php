@@ -1,3 +1,5 @@
+<?php //require 'first.php' ?>
+
 <?php
 // die(getcwd());
 // die(__DIR__);
@@ -15,7 +17,7 @@ require 'header.php';
 // pr($_FILES,'$_FILES');
 ?>
 
-<h2>New Signup</h2>
+<h2>Company Signup</h2>
 <small>Already signup? <a href="signin.php">Click here</a> to signin.</small>
 <form method="post" enctype="multipart/form-data">
   <label for="name">Name:</label><br>

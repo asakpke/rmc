@@ -1,3 +1,5 @@
+<?php //require '../first.php' ?>
+
 <?php require 'header_login.php' ?>
 
 <h2>Dashboard</h2>

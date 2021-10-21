@@ -1,3 +1,5 @@
+<?php //require '../first.php' ?>
+
 <?php
 if (defined('FOOTER_PHP_COMPANY')) {
 	return;

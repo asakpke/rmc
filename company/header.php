@@ -1,16 +1,5 @@
 <?php
-session_start();
-
-if (defined('HEADER_PHP_COMPANY')) {
-	return;
-} else {
-	define('HEADER_PHP_COMPANY', true);
-}
-
-require '../function.php';
-// require 'db.php';
-
-// pr($_SESSION['Current_Company'],'$_SESSION[Current_Company] at db.php');
+// require '../function.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +7,14 @@ require '../function.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RMC</title>
-	<link rel="stylesheet" href="../css/main.css?v2">
+	<link rel="stylesheet" href="../css/main.css?v3">
 </head>
 <body>
 <header>
-	<!-- <h1><?//=$_SERVER['HTTP_HOST']?></h1> -->
-	<!-- LARGE_LOGO -->
-	<h1>
-		<!-- LARGE_LOGO -->
-		<?//=$current_company['name']?>
-		<a href="index.php"><?=$_SESSION['Current_Company']['name']?></a>
-	</h1>
+
+	<h1><a href="index.php"><?=$_SESSION['Current_Company']['name']?></a></h1>
 	<nav>
 		<a href="index.php">Home</a> |
-
 		<?php if ($_SESSION['Current_Company']['subdomain_id'] == 0): ?>
 			<a href="signup.php">Signup</a> |
 		<?php endif; ?>

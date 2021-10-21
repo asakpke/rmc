@@ -1,3 +1,5 @@
+<?php //require '../first.php' ?>
+
 <?php
 session_start();
 
@@ -30,7 +32,7 @@ if (empty($_SESSION['Company_Login']['id'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RoshanTech RMC</title>
-	<link rel="stylesheet" href="../css/main.css?v1">
+	<link rel="stylesheet" href="../css/main.css?v2">
 </head>
 <body>
 <header>

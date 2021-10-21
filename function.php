@@ -1,15 +1,14 @@
 <?php
-if (defined('FUNCTION_PHP')) {
-	return;
-} else {
-	define('FUNCTION_PHP', true);
+// require 'config.php';
+
+$conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
+
+if ($conn->connect_error) {
+  die("<h1>Connection failed: " . $conn->connect_error . '</h1>');
 }
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+// get_current_company();
 
-require 'db.php';
 
 function pr($v,$n) {
 	// echo '<h1>$n '.count($v).'</h1><pre>'; print_r($v); echo '</pre>';
@@ -31,8 +30,6 @@ function prd($v,$n) {
 function get_current_company() {
 	global $conn;
 
-	// pr($_SESSION['Current_Company'],'$_SESSION[Current_Company]');
-
 	if (!empty($_SESSION['Current_Company'])) {
 		return; // self commented, uncomment later on
 	}
@@ -45,36 +42,17 @@ function get_current_company() {
 			AND user.status = "Active"
 			AND user.type = "Company"
 	';
-	// pr($sql, '$sql');
-	// pr($conn,'$conn');
-	// pr($this->conn,'$this->conn');
+
 	$stmt = $conn->prepare($sql);
-	// pr($_SERVER['HTTP_HOST'],'$_SERVER[HTTP_HOST]');
 	$subdomain = explode('.', $_SERVER['HTTP_HOST']);
-	// $stmt->bind_param("s", $_SERVER['HTTP_HOST']); // i - integer, d - double, s - string, b - BLOB
-	// pr($subdomain[0],'$subdomain[0]');
-	$stmt->bind_param("s", $subdomain[0]); // i - integer, d - double, s - string, b - BLOB
+	$stmt->bind_param("s", $subdomain[0]); // i=integer,d=double,s=string,b=BLOB
 	$stmt->execute();
 	$result = $stmt->get_result();
-	// pr($result, '$result');
 	$stmt->close();
 
-	// $current_company = null;
-
 	if ($result->num_rows == 1) {
-		// $current_company = $result->fetch_assoc();
-		// pr($current_company,'$current_company');
-		// $_SESSION['Current_Company'] = $current_company;
 		$_SESSION['Current_Company'] = $result->fetch_assoc();
-		// pr($_SESSION['Current_Company'],'$_SESSION[Current_Company]');
 	}
-	// else {
-	// 	unset($_SESSION['Current_Company']);
-	// 	// header("Location: company/");
-	// 	// exit(0);
-	// }
-
-	// return $current_company;
 }
 
 function set_company() {
